@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Container, Card, Row, Text } from '@nextui-org/react'
+import Navbar from '../navbar'
 const Main = ({ children, router }) => {
   return (
     <div as="main" className="pb-4">
@@ -7,7 +8,8 @@ const Main = ({ children, router }) => {
         <meta name="viewport" content="width=device-width" />
         <title>Mohammed Sameer - HomePage</title>
       </Head>
-      <Container>{children}</Container>
+      <Navbar path={router.asPath} />
+      <Container className="pt-16">{children}</Container>
     </div>
   )
 }
